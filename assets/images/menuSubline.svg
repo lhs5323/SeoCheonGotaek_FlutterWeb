@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="366" height="10" viewBox="0 0 366 10">
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <path stroke="#B37758" d="M32.728 5.5L366.228 5.5" transform="translate(-834 -1504) translate(833.772 1504) matrix(-1 0 0 1 398.956 0)"/>
+                <path fill="#A36346" d="M16.485 2H22.485V8H16.485z" transform="translate(-834 -1504) translate(833.772 1504) scale(-1 1) rotate(45 0 -42.042)"/>
+                <path fill="#A36346" d="M2 2H8V8H2z" transform="translate(-834 -1504) translate(833.772 1504) scale(-1 1) rotate(45 0 -7.071)"/>
+            </g>
+        </g>
+    </g>
+</svg>
