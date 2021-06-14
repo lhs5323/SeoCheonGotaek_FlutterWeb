@@ -22,6 +22,7 @@ class _AboutMenuState extends State<AboutMenu> {
           () =>  Column(
           children: [
             Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: List.generate(
                     _controller.aboutMenuItems.length,
                         (index) => AboutMenuItem(
@@ -64,7 +65,7 @@ class AboutMenuItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () async => [press(), Get.toNamed('/$text')],
+      onTap: () async => [press()],
       child: Container(
           margin: EdgeInsets.symmetric(horizontal: 28),
           padding: EdgeInsets.only(

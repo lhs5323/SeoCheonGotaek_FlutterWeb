@@ -27,7 +27,7 @@ class AboutMain extends StatelessWidget {
                   children: [
                     Opacity(
                         opacity: 0.1,
-                        child: SvgPicture.asset('images/title_link@3x.svg',
+                        child: SvgPicture.asset('assets/images/title_link@3x.svg',
                             width: screenwidth * 0.3,
                             height: screenwidth * 0.3 * 1.034)),
                     Container(
@@ -37,10 +37,14 @@ class AboutMain extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Spacer(),
-                            Text("사재털어 교육사업, 초가종택의 청빈한 삶이 깃든 곳"),
+                            Text("사재털어 교육사업,\n 초가종택의 청빈한\n 삶이 깃든 곳", style: TextStyle(
+                              fontSize: 36,
+                            )),
                             Spacer(),
                             Text(
-                              '이하복 고택'
+                              '이하복 고택', style: TextStyle(
+                              fontSize: 18
+                            )
                               ),
                             Spacer(),
                             Spacer()
@@ -48,7 +52,7 @@ class AboutMain extends StatelessWidget {
                         ))
                   ],
                 ),
-                Image.asset('images/lee@3x.jpg',
+                Image.asset('assets/images/lee@3x.jpg',
                     width: screenwidth * 0.16,
                     height: screenwidth * 0.29 * 1.38),
                 Text('청암 이하복청암\n 이하복 靑菴 李夏馥, 1911~1987')
@@ -59,7 +63,7 @@ class AboutMain extends StatelessWidget {
           height: screenwidth * 0.12,
           child: Align(alignment: Alignment.center,
             child: Image.asset(
-              '/images/button-link@3x.jpg',
+              'assets/images/button-link@3x.jpg',
               width: screenwidth * 0.0486,
               height: screenwidth * 0.0486,
             ),

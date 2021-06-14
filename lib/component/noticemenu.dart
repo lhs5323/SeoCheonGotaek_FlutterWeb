@@ -25,6 +25,7 @@ class _NoticeMenuState extends State<NoticeMenu> {
           () =>  Column(
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                   children: List.generate(
                       _controller.noticeMenuItems.length,
                           (index) => NoticeMenuItem(

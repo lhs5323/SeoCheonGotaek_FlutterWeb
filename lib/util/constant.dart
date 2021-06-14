@@ -1,8 +1,8 @@
-import 'dart:js';
+//import 'dart:js';
 
 import 'package:flutter/material.dart';
 
-final textTheme = Theme.of(context as BuildContext).textTheme;
+//final textTheme = Theme.of(context as BuildContext).textTheme;
 const textMainColor = Color(0xff281b1b);
 const textSelectedColor = Color(0xffb37758);
 final textSub1Color = Color(0xff281b1b).withOpacity(0.3);

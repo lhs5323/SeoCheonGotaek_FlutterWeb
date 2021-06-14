@@ -17,12 +17,12 @@ class PhotoGallery extends StatelessWidget {
         alignment: Alignment.center,
         children: [
           Image.asset(
-            'images/gallery-bg@3x.jpg',
+            'assets/images/gallery-bg@3x.jpg',
             width: screenwidth * 0.66,
             height: screenwidth * 0.667 * 0.58,
           ),
           SvgPicture.asset(
-            'images/gallery_link_edge.svg',
+            'assets/images/gallery_link_edge.svg',
             width: screenwidth * 0.667,
             height: screenwidth * 0.667 * 0.58,
           ),

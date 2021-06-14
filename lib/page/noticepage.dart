@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seocheongotaek_web/component/noticemenu.dart';
 import 'package:seocheongotaek_web/page/widget/notice/noticeMain.dart';
-import 'package:seocheongotaek_web/page/widget/pageExp.dart';
+import 'package:seocheongotaek_web/page/widget/notice/noticePageExp.dart';
 import 'package:seocheongotaek_web/page/widget/pageWay.dart';
 import 'package:seocheongotaek_web/util/constant.dart';
 import 'package:seocheongotaek_web/util/pageWrapper.dart';
@@ -26,26 +26,15 @@ class NoticeScreen extends StatelessWidget {
                     children: <Widget>[
                       NoticeMain(screenwidth: screenwidth),
                       Container(
-                        width: screenwidth,
-                        height: screenwidth * 0.5826,
-                        decoration: BoxDecoration(
-                          color: blendColor
-                        ),
-                        child: Container(
-                            margin: EdgeInsets.only(top: screenwidth * 0.09),
-                            width: double.infinity,
-                            padding: EdgeInsets.only(
-                                top: topBottomPadding,
-                                left: leftRightPadding,
-                                right: leftRightPadding),
-                            constraints: BoxConstraints(maxWidth: maxWidth),
-
-                            child: Column(
-                              children: [
-                                Row(children: [Spacer(),NoticeMenu(screenwidth: screenwidth,),Spacer()]),
-                                ],
-                            )
-                        ),
+                          width: double.infinity,
+                          padding: EdgeInsets.only(
+                              top: topBottomPadding,
+                              bottom: topBottomPadding,
+                          left: screenwidth * 0.16  ,
+                          right: screenwidth * 0.16),
+                          decoration: BoxDecoration(color: blendColor),
+                          constraints: BoxConstraints(maxWidth: maxWidth),
+                          child: NoticeMenu(screenwidth: screenwidth,)
                       ),
                       Container(
                         decoration: BoxDecoration(color: Colors.white),
@@ -53,16 +42,16 @@ class NoticeScreen extends StatelessWidget {
                           child: Row(
                           children: [
                             Spacer(),
-                            SvgPicture.asset('images/line_left.svg'),
+                            SvgPicture.asset('assets/images/line_left.svg'),
                             Spacer(),
-                            Text("주변관광지"),
+                            Text("주변관광지", style: TextStyle(fontSize: 24, color: textSub3Color)),
                             Spacer(),
-                            SvgPicture.asset('images/line_right.svg'),
+                            SvgPicture.asset('assets/images/line_right.svg'),
                             Spacer()
                           ],
                         )
                       ),
-                      PageExp(screenwidth: screenwidth),
+                      NoticePageExp(screenwidth: screenwidth),
                       PageWay(screenwidth: screenwidth)
                     ],
                   ))),

@@ -21,12 +21,12 @@ class AboutGotaekStructure extends StatelessWidget {
             alignment: Alignment.center,
             children: [
               Image.asset(
-                'images/invalid-name@3x.jpg',
+                'assets/images/invalid-name@3x.jpg',
                 width: widget.screenwidth * 0.494,
                 height: widget.screenwidth * 0.494 * 0.428,
               ),
               SvgPicture.asset(
-                'images/content_link_edge.svg',
+                'assets/images/content_link_edge.svg',
                 width: widget.screenwidth * 0.494,
                 height: widget.screenwidth * 0.494 * 0.428,
               ),
@@ -36,119 +36,137 @@ class AboutGotaekStructure extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Column(children: [
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      'images/invalid-name@3x.jpg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                    SvgPicture.asset(
-                      'images/content_link_edge.svg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                  ],
-                ),
-                Text("▲ 고택 전경"),
-              ]),
-              Column(children: [
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      'images/invalid-name@3x.jpg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                    SvgPicture.asset(
-                      'images/content_link_edge.svg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                  ],
-                ),
-                Text("▲ 고택 전경"),
-              ]),
-              Column(children: [
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      'images/invalid-name@3x.jpg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                    SvgPicture.asset(
-                      'images/content_link_edge.svg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                  ],
-                ),
-                Text("▲ 고택 전경"),
-              ]),
+              Expanded(
+                flex: 1,
+                child: Column(children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/invalid-name@3x.jpg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                      SvgPicture.asset(
+                        'assets/images/content_link_edge.svg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                    ],
+                  ),
+                  Text("▲ 고택 전경"),
+                ]),
+              ),
+              Expanded(
+                flex: 1,
+                child: Column(children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/invalid-name@3x.jpg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                      SvgPicture.asset(
+                        'assets/images/content_link_edge.svg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                    ],
+                  ),
+                  Text("▲ 고택 전경"),
+                ]),
+              ),
+              Expanded(
+                flex: 1,
+                child: Column(children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/invalid-name@3x.jpg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                      SvgPicture.asset(
+                        'assets/images/content_link_edge.svg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                    ],
+                  ),
+                  Text("▲ 고택 전경"),
+                ]),
+              ),
             ],
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              Column(children: [
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      'images/invalid-name@3x.jpg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                    SvgPicture.asset(
-                      'images/content_link_edge.svg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                  ],
-                ),
-                Text("▲ 고택 전경"),
-              ]),
-              Column(children: [
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      'images/invalid-name@3x.jpg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                    SvgPicture.asset(
-                      'images/content_link_edge.svg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                  ],
-                ),
-                Text("▲ 고택 전경"),
-              ]),
-              Column(children: [
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      'images/invalid-name@3x.jpg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                    SvgPicture.asset(
-                      'images/content_link_edge.svg',
-                      width: widget.screenwidth * 0.205,
-                      height: widget.screenwidth * 0.205 * 0.66,
-                    ),
-                  ],
-                ),
-                Text("▲ 고택 전경"),
-              ]),
+              Expanded(
+                flex: 1,
+                child: Column(children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/invalid-name@3x.jpg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                      SvgPicture.asset(
+                        'assets/images/content_link_edge.svg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                    ],
+                  ),
+                  Text("▲ 고택 전경"),
+                ]),
+              ),
+              Expanded(
+                flex: 1,
+                child: Column(children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/invalid-name@3x.jpg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                      SvgPicture.asset(
+                        'assets/images/content_link_edge.svg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                    ],
+                  ),
+                  Text("▲ 고택 전경"),
+                ]),
+              ),
+              Expanded(
+                flex: 1,
+                child: Column(children: [
+                  Stack(
+                    alignment: Alignment.center,
+                    children: [
+                      Image.asset(
+                        'assets/images/invalid-name@3x.jpg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                      SvgPicture.asset(
+                        'assets/images/content_link_edge.svg',
+                        width: widget.screenwidth * 0.205,
+                        height: widget.screenwidth * 0.205 * 0.66,
+                      ),
+                    ],
+                  ),
+                  Text("▲ 고택 전경"),
+                ]),
+              ),
             ],
           )
         ]));

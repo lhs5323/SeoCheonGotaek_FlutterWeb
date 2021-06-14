@@ -37,17 +37,11 @@ class AboutScreen extends StatelessWidget {
                     left: leftRightPadding,
                     right: leftRightPadding),
                 constraints: BoxConstraints(maxWidth: maxWidth),
-                child: Column(
-                  children: [
-                    Row(children: [
-                      Spacer(),
-                      AboutMenu(
-                        screenwidth: screenwidth,
-                      ),
-                      Spacer()
-                    ]),
-                  ],
-                )),
+                child:
+                  AboutMenu(
+                    screenwidth: screenwidth,
+                  ),
+                  ),
           ),
           Container(
               decoration: BoxDecoration(color: Colors.white),
@@ -56,11 +50,11 @@ class AboutScreen extends StatelessWidget {
               child: Row(
                 children: [
                   Spacer(),
-                  SvgPicture.asset('images/line_left.svg'),
+                  SvgPicture.asset('assets/images/line_left.svg'),
                   Spacer(),
                   Text("포토갤러리"),
                   Spacer(),
-                  SvgPicture.asset('images/line_right.svg'),
+                  SvgPicture.asset('assets/images/line_right.svg'),
                   Spacer()
                 ],
               )),

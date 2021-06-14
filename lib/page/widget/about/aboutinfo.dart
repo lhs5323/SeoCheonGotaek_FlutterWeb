@@ -17,7 +17,7 @@ class AboutInfo extends StatelessWidget {
         width: screenwidth,
         height: screenwidth * 0.3618,
         child: Stack(children: <Widget>[
-          Image.asset('images/about-bg-1@3x.jpg',
+          Image.asset('assets/images/about-bg-1@3x.jpg',
               width: screenwidth, fit: BoxFit.cover,),
           Center(
               child: Column(
@@ -31,7 +31,7 @@ class AboutInfo extends StatelessWidget {
                     style: TextStyle(fontSize: 18, color: textSub2Color),
                   ),
                   Spacer(),
-                  SvgPicture.asset('images/line.svg'),
+                  SvgPicture.asset('assets/images/line.svg'),
                   Spacer(),
                   Text(
                     "충남 서천군 기산면 신산리에 위치한 서천 이하복 고택은 우리나라 중부지방의 전통농가 형태를 \n "
