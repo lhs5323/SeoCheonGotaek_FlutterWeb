@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:seocheongotaek_web/util/constant.dart';
 import 'package:seocheongotaek_web/util/responsive.dart';
+import 'package:get/get.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PageExp extends StatelessWidget {
   const PageExp({
@@ -19,30 +21,31 @@ class PageExp extends StatelessWidget {
         Container(
             width: screenwidth,
             height: screenwidth * 1.3,
-            padding: EdgeInsets.only(right: leftRightPadding * 0.112, left: leftRightPadding * 0.112),
+            padding: EdgeInsets.only(left: screenwidth * 0.107, right: screenwidth * 0.107),
             color: Colors.white,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Spacer(),
-                Row(
-                  children: [
-                    Spacer(),
-                    Text(
-                      '행사',
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: textSub3Color,
-                          letterSpacing: 0.3),
-                    ),
-                    SizedBox(width: screenwidth * 0.008),
-                    SvgPicture.asset('assets/images/menuSubline.svg', width: screenwidth * 0.692, height: 10,),
-                    Spacer(),
-                  ],
+                Flexible(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Text(
+                        '행사',
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: textSub3Color,
+                            letterSpacing: 0.3),
+                      ),
+                      SizedBox(width: screenwidth * 0.029 ),
+                      Expanded(child: SvgPicture.asset('assets/images/menuSubline.svg', fit: BoxFit.fitWidth,)),
+                      ],
+                  ),
                 ),
                 Spacer(),
                 Text(
-                  '이하복 고택에서, 사랑을 채우다',
+                  '서천에서 만나는 인생사진 \n 우리 사랑채, 우리사랑을 채우다',
                   style: TextStyle(
                       fontSize: 21,
                       color: textMainColor,
@@ -58,20 +61,22 @@ class PageExp extends StatelessWidget {
                       height: screenwidth * 0.196,
                       fit: BoxFit.cover,
                     ),
-                    SvgPicture.asset('assets/images/go-to-link.svg', width: screenwidth * 0.056, height: screenwidth * 0.056 * 0.85,)
+                    InkWell(
+                        onTap: () => Get.toNamed('/Notice'),
+                        child: SvgPicture.asset('assets/images/go-to-link.svg', width: screenwidth * 0.056, height: screenwidth * 0.056 * 0.85,))
                   ],
                 ),
                 Spacer(),
                 Stack(alignment: Alignment.center, children: [
                   Image.asset(
-                    'assets/images/notice-event-content-1@3x.jpg',
-                    width: screenwidth * 0.8263,
-                    height: screenwidth * 0.8263 * 0.631,
+                    'assets/images/about-title-content-1@3x.jpg',
+                    //width: screenwidth * 0.8263,
+                    //height: screenwidth * 0.8263 * 0.631,
                   ),
                   SvgPicture.asset(
                     'assets/images/content_link_edge.svg',
-                    width: screenwidth * 0.8363,
-                    height: screenwidth * 0.8363 * 0.6951,
+                    //width: screenwidth * 0.8263,
+                    //height: screenwidth * 0.8263 * 0.8,
                   ),
                 ]),
                 Spacer(),
@@ -80,26 +85,87 @@ class PageExp extends StatelessWidget {
         Container(
             width: screenwidth,
             height: screenwidth * 1.3,
-            padding: EdgeInsets.only(right: leftRightPadding * 0.112, left: leftRightPadding * 0.112),
+            padding: EdgeInsets.only(left: screenwidth * 0.107, right: screenwidth * 0.107),
             color: Colors.white,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 Spacer(),
-                Row(
+                Flexible(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Text(
+                        '주변관광지',
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: textSub3Color,
+                            letterSpacing: 0.3),
+                      ),
+                      SizedBox(width: screenwidth * 0.029),
+                      Expanded(child: SvgPicture.asset('assets/images/menuSubline.svg')),
+                      ],
+                  ),
+                ),
+                Spacer(),
+                Text(
+                  '우리의 전통 문화와 자연의 소중함\n:서천식물예술원',
+                  style: TextStyle(
+                      fontSize: 21,
+                      color: textMainColor,
+                      letterSpacing: 0.03),
+                ),
+                Spacer(),
+                Stack(
+                  alignment: Alignment.center,
                   children: [
-                    Spacer(),
-                    Text(
-                      '소개',
-                      style: TextStyle(
-                          fontSize: 18,
-                          color: textSub3Color,
-                          letterSpacing: 0.3),
+                    Image.asset(
+                      'assets/images/button-link@3x.jpg',
+                      width: screenwidth * 0.196,
+                      height: screenwidth * 0.196,
+                      fit: BoxFit.cover,
                     ),
-                    SizedBox(width: screenwidth * 0.008),
-                    SvgPicture.asset('assets/images/menuSubline.svg', width: screenwidth * 0.692, height: 10,),
-                    Spacer(),
+                    InkWell(
+                        onTap: () => Get.toNamed('/About'),
+                        child: SvgPicture.asset('assets/images/go-to-link.svg', width: screenwidth * 0.056, height: screenwidth * 0.056 * 0.85,))
                   ],
+                ),
+                Spacer(),
+                Stack(alignment: Alignment.center, children: [
+                  Image.asset(
+                    'assets/images/notice-attraction-content-2@3x.jpg',
+                    ),
+                  SvgPicture.asset(
+                    'assets/images/content_link_edge.svg',
+                    ),
+                ]),
+                Spacer(),
+              ],
+            )),
+        Container(
+            width: screenwidth,
+            height: screenwidth * 1.3,
+            padding: EdgeInsets.only(left: screenwidth * 0.107, right: screenwidth * 0.107),
+            color: Colors.white,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Spacer(),
+                Flexible(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Text(
+                        '사진 더보기',
+                        style: TextStyle(
+                            fontSize: 14,
+                            color: textSub3Color,
+                            letterSpacing: 0.3),
+                      ),
+                      SizedBox(width: screenwidth * 0.029 ),
+                      Expanded(child: SvgPicture.asset('assets/images/menuSubline.svg')),
+                    ],
+                  ),
                 ),
                 Spacer(),
                 Text(
@@ -126,75 +192,10 @@ class PageExp extends StatelessWidget {
                 Stack(alignment: Alignment.center, children: [
                   Image.asset(
                     'assets/images/event-1@3x.jpg',
-                    width: screenwidth * 0.8263,
-                    height: screenwidth * 0.8263 * 0.631,
-                  ),
+                    ),
                   SvgPicture.asset(
                     'assets/images/content_link_edge.svg',
-                    width: screenwidth * 0.8363,
-                    height: screenwidth * 0.8363 * 0.6951,
-                  ),
-                ]),
-                Spacer(),
-              ],
-            )),
-        Container(
-            width: screenwidth,
-            height: screenwidth * 1.3,
-            padding: EdgeInsets.only(right: leftRightPadding * 0.112, left: leftRightPadding * 0.112),
-            color: Colors.white,
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Spacer(),
-                Row(
-                  children: [
-                    Spacer(),
-                    Text(
-                      '주변관광지',
-                      style: TextStyle(
-                          fontSize: 24,
-                          color: textSub3Color,
-                          letterSpacing: 0.3),
                     ),
-                    SizedBox(width: screenwidth * 0.008),
-                    SvgPicture.asset('assets/images/menuSubline.svg', width: screenwidth * 0.692, height: 10,),
-                    Spacer(),
-                  ],
-                ),
-                Spacer(),
-                Text(
-                  '청암 이하복, 고택을 이야기하다',
-                  style: TextStyle(
-                      fontSize: 21,
-                      color: textMainColor,
-                      letterSpacing: 0.03),
-                ),
-                Spacer(),
-                Stack(
-                  alignment: Alignment.center,
-                  children: [
-                    Image.asset(
-                      'assets/images/button-link@3x.jpg',
-                      width: screenwidth * 0.196,
-                      height: screenwidth * 0.196,
-                      fit: BoxFit.cover,
-                    ),
-                    SvgPicture.asset('assets/images/go-to-link.svg', width: screenwidth * 0.056, height: screenwidth * 0.056 * 0.85,)
-                  ],
-                ),
-                Spacer(),
-                Stack(alignment: Alignment.center, children: [
-                  Image.asset(
-                    'assets/images/event-1@3x.jpg',
-                    width: screenwidth * 0.8263,
-                    height: screenwidth * 0.8263 * 0.631,
-                  ),
-                  SvgPicture.asset(
-                    'assets/images/content_link_edge.svg',
-                    width: screenwidth * 0.8363,
-                    height: screenwidth * 0.8363 * 0.6951,
-                  ),
                 ]),
                 Spacer(),
               ],
@@ -263,7 +264,9 @@ class PageExp extends StatelessWidget {
                               height: screenwidth * 0.0486,
                               fit: BoxFit.cover,
                             ),
-                            SvgPicture.asset('assets/images/go-to-link.svg')
+                            InkWell(
+                                onTap: () => Get.toNamed('/Notice'),
+                                child: SvgPicture.asset('assets/images/go-to-link.svg'))
                           ],
                         )
                       ],
@@ -318,7 +321,12 @@ class PageExp extends StatelessWidget {
                               height: screenwidth * 0.0486,
                               fit: BoxFit.cover,
                             ),
-                            SvgPicture.asset('assets/images/go-to-link.svg')
+                            InkWell(
+                                onTap: () {
+                                  const url = 'http://www.seocheon.go.kr.dj3.ncsfda.org/tour.do';
+                                  launchURL(url);
+                                },
+                                child: SvgPicture.asset('assets/images/go-to-link.svg'))
                           ],
                         )
                       ],
@@ -413,5 +421,14 @@ class PageExp extends StatelessWidget {
             color: Colors.white),
       ],
     );
+  }
+}
+
+//launching URL
+launchURL(String url) async {
+  if (await canLaunch(url)) {
+    await launch(url, forceWebView: true);
+  } else {
+    throw 'Could not launch $url';
   }
 }

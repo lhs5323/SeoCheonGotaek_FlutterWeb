@@ -13,6 +13,7 @@ const bodyBottomColor = Color(0xff281b1b);
 final notSelectedBorderColor = Color(0xff281b1b).withOpacity(0.3);
 const selectedBorderColor = Color(0xffb37758);
 const topBottomPadding = 19.0;
+const topBottomMargin = 24.0;
 const leftRightSubMenuPadding = 56.0;
 const leftRightPadding = 235.0;
 const maxWidth = 2486.0;

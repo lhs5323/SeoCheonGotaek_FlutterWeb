@@ -33,6 +33,7 @@ dependencies:
   carousel_slider: ^3.0.0
   google_fonts: ^2.1.0
   flutter_svg_provider: ^0.1.9
+  url_launcher: ^6.0.9
 
 dev_dependencies:
   flutter_test:
@@ -68,8 +69,13 @@ flutter:
   fonts:
       - family: NotoSerifKR
         fonts:
-          - asset: assets/fonts/NotoSerifKR-Black.otf
+          - asset: assets/fonts/NotoSerifKR-Regular.otf
+          - asset: assets/fonts/NotoSerifKR-Light.otf
+            weight: 400
           - asset: assets/fonts/NotoSerifKR-Bold.otf
+            weight: 700
+#uses-material-design: true
+
   #         style: italic
   #   - family: Trajan Pro
   #     fonts:

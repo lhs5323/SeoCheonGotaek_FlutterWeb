@@ -24,47 +24,63 @@ class PageWay extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Spacer(),
-              Row(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  Text(
-                    '운영 및 주소',
-                    style: TextStyle(
-                        fontSize: 18,
-                        color: textSub3Color,
-                        letterSpacing: 0.3),
-                  ),
-                  SizedBox(width: screenwidth * 0.008),
-                  Flexible(child: SvgPicture.asset('assets/images/menuSubline.svg', width: screenwidth * 0.493, height: 10,)),
-                  Spacer(),
-                ],
+              Flexible(
+                child: Row(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
+                    Text(
+                      '운영 및 주소',
+                      style: TextStyle(
+                          fontSize: 18,
+                          color: textSub3Color,
+                          letterSpacing: 0.3),
+                    ),
+                    SizedBox(width: screenwidth * 0.008),
+                    Expanded(child: SvgPicture.asset('assets/images/menuSubline.svg')),
+                  ],
+                ),
               ),
               Spacer(),
-              Text(
-                '문의 및 안내    청암문화재단',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: textMainColor,
-                    letterSpacing: 0.1),
+              RichText(
+                text: TextSpan(
+                  children: <TextSpan>[
+                    TextSpan(
+                      text: '문의 및 안내:  ', style: TextStyle(fontSize: 14, color: textMainColor, fontWeight: FontWeight.w700, fontFamily: 'NotoSerifKR')
+                    ),
+                    TextSpan(
+                        text: '청암문화재단', style: TextStyle(fontSize: 14, color: textMainColor, fontFamily: 'NotoSerifKR')
+                    ),
+                  ]
+                )
               ),
               Spacer(),
-              Text(
-                '이용시간    9:00 ~ 18:00',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: textMainColor,
-                    letterSpacing: 0.1),
+              RichText(
+                  text: TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: '이용시간:  ', style: TextStyle(fontSize: 14, color: textMainColor, fontWeight: FontWeight.w700, fontFamily: 'NotoSerifKR')
+                        ),
+                        TextSpan(
+                            text: '9:00 ~ 18:00', style: TextStyle(fontSize: 14, color: textMainColor, fontFamily: 'NotoSerifKR')
+                        ),
+                      ]
+                  )
               ),
               Spacer(),
-              Text(
-                '주소    충청남도 서천군 기산면 신막로 57번길 32-3',
-                style: TextStyle(
-                    fontSize: 18,
-                    color: textMainColor,
-                    letterSpacing: 0.1),
+              RichText(
+                  text: TextSpan(
+                      children: <TextSpan>[
+                        TextSpan(
+                            text: '주소:  ', style: TextStyle(fontSize: 14, color: textMainColor, fontWeight: FontWeight.w700, fontFamily: 'NotoSerifKR')
+                        ),
+                        TextSpan(
+                            text: '충청남도 서천군 기산면 신막로 57번길 32-3', style: TextStyle(fontSize: 14, color: textMainColor, fontFamily: 'NotoSerifKR')
+                        ),
+                      ]
+                  )
               ),
               Spacer(),
-              Image.asset('assets/images/event-1@3x.jpg'),
+              Image.asset('assets/images/seocheonmap.PNG'),
               Spacer(),
             ],
           ),

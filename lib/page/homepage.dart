@@ -59,7 +59,7 @@ class HomeScreen extends StatelessWidget {
               child: Column(
         children: <Widget>[
           HomeSlider(screenwidth: screenwidth, imagesList: imagesList, screenheight: screenheight),
-          HomeInfo(screenwidth: screenwidth),
+          HomeInfo(screenwidth: screenwidth, screenheight: screenheight),
           PageExp(screenwidth: screenwidth),
           PageWay(screenwidth: screenwidth),
         ],
