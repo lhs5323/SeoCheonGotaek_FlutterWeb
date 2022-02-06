@@ -6,7 +6,7 @@ class AboutMenuController extends GetxController {
   int get selectedIndex => _selectedIndex.value;
 
   List<String> get aboutMenuItems =>
-      ["인물소개", "전시관 소개", "고택 평면도 형식"];
+      ["재단소개", "인물소개", "전시관 소개", "고택 평면도 형식"];
 
   void setMenuIndex(int index){
     _selectedIndex.value = index;

@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:seocheongotaek_web/component/webmenu.dart';
@@ -36,7 +37,7 @@ class _PageWrapperState extends State<PageWrapper> {
               children: [
                 Spacer(),
                 InkWell(
-                  onTap: () => Get.toNamed('/'),
+                  onTap: () => [Get.toNamed('/Home'), _controller.setMenuIndex(0)],
                   child: Container(
                     margin: EdgeInsets.only(bottom: topBottomPadding),
                     child: SvgPicture.asset('assets/images/gotaeklogo.svg',
@@ -71,12 +72,12 @@ class _PageWrapperState extends State<PageWrapper> {
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
                 InkWell(
-                    onTap: () => Get.toNamed('/'),
+                    onTap: () => [Get.toNamed('/Home'), _controller.setMenuIndex(0)],
                     child: Container(child: SvgPicture.asset('assets/images/gotaeklogo.svg', color: Colors.white))),
                 Flexible(
                   child: Container(
                       padding: EdgeInsets.only(top: 4, bottom: 4),
-                      child: Text(
+                      child: AutoSizeText(
                         "Copyright ⓒ 2021 청암문화재단 산하 민속문화재. All Rights Reserved.",
                         style: TextStyle(
                           fontSize: 12,

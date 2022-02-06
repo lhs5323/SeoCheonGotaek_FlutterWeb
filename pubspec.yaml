@@ -34,6 +34,8 @@ dependencies:
   google_fonts: ^2.1.0
   flutter_svg_provider: ^0.1.9
   url_launcher: ^6.0.9
+  auto_size_text: ^3.0.0
+  timelines: ^0.1.0
 
 dev_dependencies:
   flutter_test:

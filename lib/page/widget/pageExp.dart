@@ -1,3 +1,4 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -31,7 +32,7 @@ class PageExp extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Text(
+                      AutoSizeText(
                         '행사',
                         style: TextStyle(
                             fontSize: 14,
@@ -44,10 +45,10 @@ class PageExp extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                Text(
+                AutoSizeText(
                   '서천에서 만나는 인생사진 \n 우리 사랑채, 우리사랑을 채우다',
                   style: TextStyle(
-                      fontSize: 21,
+                      fontSize: 14,
                       color: textMainColor,
                       letterSpacing: 0.03),
                 ),
@@ -95,7 +96,7 @@ class PageExp extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Text(
+                      AutoSizeText(
                         '주변관광지',
                         style: TextStyle(
                             fontSize: 14,
@@ -108,10 +109,10 @@ class PageExp extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                Text(
+                AutoSizeText(
                   '우리의 전통 문화와 자연의 소중함\n:서천식물예술원',
                   style: TextStyle(
-                      fontSize: 21,
+                      fontSize: 14,
                       color: textMainColor,
                       letterSpacing: 0.03),
                 ),
@@ -155,7 +156,7 @@ class PageExp extends StatelessWidget {
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Text(
+                      AutoSizeText(
                         '사진 더보기',
                         style: TextStyle(
                             fontSize: 14,
@@ -168,10 +169,10 @@ class PageExp extends StatelessWidget {
                   ),
                 ),
                 Spacer(),
-                Text(
+               AutoSizeText(
                   '청암 이하복, 고택을 이야기하다',
                   style: TextStyle(
-                      fontSize: 21,
+                      fontSize: 14,
                       color: textMainColor,
                       letterSpacing: 0.03),
                 ),

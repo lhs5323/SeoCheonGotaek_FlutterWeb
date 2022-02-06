@@ -29,6 +29,7 @@ class AboutGotaekDetail extends StatelessWidget {
                   ),
                 ),
               ),
+              Spacer(),
               Expanded(
                 flex: 1,
                 child: Column(

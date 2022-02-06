@@ -24,8 +24,6 @@ class HomeSlider extends StatelessWidget {
         options: CarouselOptions(
             height: screenheight,
             viewportFraction: 1.0,
-            autoPlay: true,
-            autoPlayAnimationDuration: Duration(seconds: 30)
         ),
         items: imagesList.map((item) =>
             Stack(alignment: Alignment.center, children: [
@@ -57,8 +55,6 @@ class HomeSlider extends StatelessWidget {
         options: CarouselOptions(
             height: screenwidth * 0.57,
             viewportFraction: 1.0,
-            autoPlay: true,
-            autoPlayAnimationDuration: Duration(seconds: 30)
         ),
         items: imagesList.map((item) =>
             Stack(alignment: Alignment.centerLeft, children: [

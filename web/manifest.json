@@ -5,7 +5,7 @@
     "display": "standalone",
     "background_color": "#0175C2",
     "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "description": "청암문화재단 메인 홈페이지(서천 이하복 가옥)- 충남 서천군 기산면 신산리에 위치한 서천 이하복 고택은 우리나라 중부지방의 전통농가 형태를 그대로 간직한 채 보존되고 있는 대표적인 가옥으로서 그 가치를 인정 받아 1984년 12월 24일 국가 민속자료 제 197호로 지정되었습니다.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

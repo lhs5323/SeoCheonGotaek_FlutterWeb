@@ -1,19 +1,82 @@
+import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:seocheongotaek_web/util/constant.dart';
+import 'package:seocheongotaek_web/util/responsive.dart';
 
 class AboutMain extends StatelessWidget {
   const AboutMain({
     Key key,
     @required this.screenwidth,
+    @required this.screenheight
   }) : super(key: key);
 
   final screenwidth;
+  final screenheight;
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return (Responsive.isMobile(context)) ?
+    Container(
+      decoration: BoxDecoration(color: bodyMainColor),
+      child: Stack(alignment: Alignment.bottomCenter, children: [
+        Container(
+            width: screenwidth,
+            height: screenheight,
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    Opacity(
+                        opacity: 0.1,
+                        child: SvgPicture.asset('assets/images/title_link@3x.svg',
+                            width: screenwidth * 0.7,
+                            height: screenwidth * 0.7* 1.034)),
+                    Container(
+                        width: screenwidth * 0.8,
+                        height: screenwidth * 0.7 * 1.034,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Spacer(),
+                            AutoSizeText("사재털어 교육사업,\n 초가종택의 청빈한\n 삶이 깃든 곳", maxLines: 3,style: TextStyle(
+                              fontSize: 24,
+
+                            )),
+                            Spacer(),
+                            AutoSizeText(
+                                '이하복 고택', style: TextStyle(
+                                fontSize: 18
+                            )
+                            ),
+                            Spacer(),
+                            Spacer()
+                          ],
+                        ))
+                  ],
+                ),
+                Image.asset('assets/images/lee@3x.jpg',
+                    width: screenwidth * 0.7,
+                    height: screenwidth * 0.7),
+                AutoSizeText('청암 이하복청암\n 이하복 靑菴 李夏馥, 1911~1987', maxFontSize: 14,)
+              ],
+            )),
+        Container(
+          width: screenwidth,
+          height: screenwidth * 0.12,
+          child: Align(alignment: Alignment.center,
+            child: Image.asset(
+              'assets/images/button-link@3x.jpg',
+              width: screenwidth * 0.0486,
+              height: screenwidth * 0.0486,
+            ),
+          ),
+        )
+      ]),
+    ) : Container(
       decoration: BoxDecoration(color: bodyMainColor),
       child: Stack(alignment: Alignment.bottomCenter, children: [
         Container(
@@ -37,11 +100,12 @@ class AboutMain extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Spacer(),
-                            Text("사재털어 교육사업,\n 초가종택의 청빈한\n 삶이 깃든 곳", style: TextStyle(
+                            AutoSizeText("사재털어 교육사업,\n 초가종택의 청빈한\n 삶이 깃든 곳", maxLines: 3,style: TextStyle(
                               fontSize: 36,
+
                             )),
                             Spacer(),
-                            Text(
+                            AutoSizeText(
                               '이하복 고택', style: TextStyle(
                               fontSize: 18
                             )
@@ -55,7 +119,7 @@ class AboutMain extends StatelessWidget {
                 Image.asset('assets/images/lee@3x.jpg',
                     width: screenwidth * 0.16,
                     height: screenwidth * 0.29 * 1.38),
-                Text('청암 이하복청암\n 이하복 靑菴 李夏馥, 1911~1987')
+                AutoSizeText('청암 이하복청암\n 이하복 靑菴 李夏馥, 1911~1987')
               ],
             )),
         Container(
