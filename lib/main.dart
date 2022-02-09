@@ -9,8 +9,10 @@ import 'package:seocheongotaek_web/page/noticepage.dart';
 import 'package:seocheongotaek_web/page/widget/notice/noticeEventDetailOne.dart';
 import 'package:seocheongotaek_web/page/widget/notice/noticeEventDetailTwo.dart';
 import 'package:seocheongotaek_web/util/constant.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy();
   runApp(MyApp());
 }
 
